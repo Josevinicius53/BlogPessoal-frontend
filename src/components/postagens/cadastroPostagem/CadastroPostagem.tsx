@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Container, Typography, TextField, Button, Select, InputLabel, FormControl, FormHelperText, MenuItem } from "@material-ui/core"
-import './CadastroPostagem.css';
+import './CadrastroPostagem.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Tema from '../../../models/Tema';
 import useLocalStorage from 'react-use-localstorage';
@@ -20,7 +20,7 @@ function CadastroPostagem() {
     );
 
     useEffect(() => {
-        if (token == "") {
+        if (token === "") {
             alert("Você precisa estar logado")
             navigate("/login")
 
@@ -42,7 +42,7 @@ function CadastroPostagem() {
         tema: null
     })
 
-    useEffect(() => { 
+    useEffect(() => {
         setPostagem({
             ...postagem,
             tema: tema
